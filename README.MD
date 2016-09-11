@@ -123,5 +123,33 @@ mapper.map({
 }); // {fullName: 'Tommy Lee Jones'}
 ```
 
+## Deep properties mapping
+
+The tool uses [object-path](https://www.npmjs.com/package/object-path) for accessing properties.
+
+```js
+var mapper = new ObjectMapper();
+mapper
+    .addPropertyMapping({
+        from: 'author.name',
+        to: 'authorName'
+    })
+    .addPropertyMapping({
+        from: 'tags.0',
+        to: 'lastTag'
+    });
+
+mapper.map({
+    author: {
+        name: 'Lukasz',
+        surname: 'Kuzynski'
+    },
+    
+    tags: ['rpc', 'http', 'api']
+}); // { authorName: 'Lukasz', lastTag: 'rpc' }
+
+```
+
+    
 ## Reference
 [Just read JSDoc](index.js) 
