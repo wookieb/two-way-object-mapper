@@ -1,0 +1,22 @@
+{
+  "name": "two-way-object-mapper",
+  "version": "1.0.0",
+  "description": "Maps an object to another using defined rules",
+  "main": "index.js",
+  "scripts": {
+	"test": "./node_modules/.bin/istanbul cover -x test.js ./node_modules/.bin/_mocha -- -R spec test.js"
+  },
+  "author": "Łukasz Kużyński <lukasz.kuzynski@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+	"object-path": "^0.11.2",
+	"predicates": "^1.0.1"
+  },
+  "devDependencies": {
+	"blanket": "^1.2.3",
+	"chai": "^3.5.0",
+	"istanbul": "^0.4.5",
+	"mocha": "^3.0.2",
+	"sinon": "^1.17.5"
+  }
+}
