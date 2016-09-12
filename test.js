@@ -116,6 +116,28 @@ describe('property mapping', function() {
             firstName: 'Andree'
         });
     });
+
+    it('maps inherited properties', function() {
+
+        var Source = function() {};
+        Source.prototype = USER;
+
+        mapper.addPropertyMapping({
+            from: 'firstName',
+            to: 'name'
+        });
+
+        var target = mapper.map(new Source(), {});
+        assert.isNotOk(Object.hasOwnProperty('firstName'));
+        assert.deepEqual(target, {
+            name: 'Tommy'
+        });
+
+        assert.deepEqual(mapper.reverseMap(target, {}), {
+            firstName: 'Tommy'
+        });
+
+    });
 });
 
 describe('deep property mapping', function() {

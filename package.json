@@ -1,6 +1,6 @@
 {
   "name": "two-way-object-mapper",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Maps an object to another using defined rules",
   "main": "index.js",
   "scripts": {

@@ -153,3 +153,8 @@ mapper.map({
     
 ## Reference
 [Just read JSDoc](index.js) 
+
+## Changelog
+
+__1.1.0__
+* Ability to read inherited properties

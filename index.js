@@ -1,6 +1,6 @@
 'use strict';
 
-var objectPath = require('object-path');
+var objectPath = require('object-path').withInheritedProps;
 var is = require('predicates');
 
 var returnProperty = function(name) {
